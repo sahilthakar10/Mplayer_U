@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="10dp"
+    android:elevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:id="@+id/r1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/url"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/flag"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/track_id"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/image_url"
+            />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/track_image"
+            android:src="@mipmap/ic_launcher_round"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/track_name"
+            android:layout_toRightOf="@+id/track_image"
+            android:textSize="18dp"
+            android:textColor="#000"
+
+            android:text="We don't talk anymore"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="artist name"
+            android:layout_below="@+id/track_name"
+            android:id="@+id/artist_name"
+            android:layout_toRightOf="@+id/track_image"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:textColor="#000"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

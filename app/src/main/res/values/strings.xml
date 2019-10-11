@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mplayer_U</string>
+    <string name="app_search">Search Music Title, Artists, Movie etc.</string>
+    <string name="app_moto">Listen to your favourite</string>
+    <string name="app_title">MPlayer</string>
+    <string name="favorites">Your Favourites</string>
+    <string name="app_moto2"> songs from youtube</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_media_player">URL Media Player</string>
+    <string name="loading">Loading...</string>
+    <string name="file_not_found">File not found</string>
+</resources>

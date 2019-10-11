@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stream">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:id="@+id/title_Layout"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/arrow_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_title"
+            android:textColor="#fff"
+            android:layout_centerVertical="true"
+            android:textSize="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/shape"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/favorite"
+            android:id="@+id/favorite"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:id="@+id/image_url"
+        android:layout_below="@+id/title_Layout"/>
+
+    <LinearLayout
+        android:id="@+id/controls_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/image_url">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentTime"
+            android:text="00:00:00"
+            android:padding="5dp"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalTime"
+            android:text="00:00:00"
+
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/controls_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="We don't Talk Any more"
+        android:textSize="20dp"
+        android:id="@+id/track_name"
+        android:textColor="#000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/track_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Charlie Puth"
+        android:textSize="20dp"
+
+        android:id="@+id/artist_name"
+        android:textColor="#000"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="play"
+        android:layout_below="@+id/artist_name"
+        app:cardCornerRadius="90dp"
+        android:elevation="3dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#fff"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginLeft="5dp"
+            android:visibility="invisible"
+            android:src="@drawable/triangle"
+            />
+
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:onClick="pause"
+            android:padding="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/combined_shape_2"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/combined_shape"
+        android:layout_below="@+id/artist_name"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="35dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_heart"
+        android:id="@+id/shape_heart"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_below="@+id/artist_name"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/shape_heart_red"
+        android:id="@+id/shape_heart_red"
+        android:visibility="gone"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_below="@+id/artist_name"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="35dp"
+        />
+
+</RelativeLayout>

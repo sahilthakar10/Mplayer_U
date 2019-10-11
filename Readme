@@ -1,0 +1,42 @@
+Tools:-
+	implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+
+    implementation "android.arch.lifecycle:viewmodel:$lifecycle_version"
+    implementation "android.arch.lifecycle:livedata:$lifecycle_version"
+	
+Task done(Using MVVM architacture(Retrofit , Gson for Json Parsing and Sqlite room) And Recycler VIew ):-
+
+1.Splash Screen
+Shows for 2 sec on application start and then shows the search bar
+Clicking on search bar takes the user to the search screen	
+
+2.Search Screen:-
+Has search bar which fetches tracks from here: http://itunes.apple.com/search?term=jack&limit=4
+Autocomplete search bar from previous searches
+Tapping the search result, highlight the track and go to the player screen
+The favourites button on top takes the user to the Favourites list screen
+
+3.Player Screen
+Track starts playing automatically
+Shows the artist/album picture
+Shows progress bar which updated as the music plays with the remaining time in mm:ss format
+Back & List button takes to search screen with the same item highlighted or to the favourites screen if the tack picked from favourites
+There should be buttons to pause/play/add to favourites (white & red)
+
+4.Favourites Screen
+Shows the list of tracks added to the favourites list
+Tap on a track shows the player screen
+It’s a vertically scrollable list
+Swipe on the track removes track from favourites (no confirmation required)	
