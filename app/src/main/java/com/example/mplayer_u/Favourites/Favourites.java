@@ -39,8 +39,7 @@ public class Favourites extends AppCompatActivity {
         arrow_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext() , MainActivity.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
@@ -78,10 +77,5 @@ public class Favourites extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext() , MainActivity.class);
-        startActivity(intent);
-    }
 
 }
