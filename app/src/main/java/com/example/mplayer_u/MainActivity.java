@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView favorite;
     Note_Database database;
     Stream stream;
+    String array[];
     @Override
     protected void onResume() {
         super.onResume();
@@ -117,6 +118,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onChanged(List<Table_Note> notes) {
 
                 noteAdapter.setNotes(notes , MainActivity.this);
+                array = new String[notes.size()];
+                for (int i =0 ; i < notes.size() ; i++){
+                    Table_Note currentNote = notes.get(i);
+                    array[i] = currentNote.getTrackName();
+                    Log.e("array" , array[i]);
+
+                }
+                text.setAdapter(new ArrayAdapter<String>( getApplicationContext(),android.R.layout.simple_dropdown_item_1line, array));
+
             }
         });
 
