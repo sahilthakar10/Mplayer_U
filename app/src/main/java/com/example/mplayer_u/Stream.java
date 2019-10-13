@@ -149,12 +149,13 @@ public class Stream extends AppCompatActivity implements View.OnClickListener {
         if (view.getId() == R.id.arrow_back) {
            onBackPressed();
         } else if (view.getId() == R.id.favorite) {
+              mediaPlayer.pause();
             Intent intent = new Intent(getApplicationContext(), Favourites.class);
-            mediaPlayer.reset();
-            mediaPlayer.release();
-            mediaPlayer = null;
-
             startActivity(intent);
+           
+         //   mediaPlayer.reset();
+         //   mediaPlayer.release();
+          //  mediaPlayer = null;
         } else if (view.getId() == R.id.shape_heart) {
             shape_heart_red.setVisibility(View.VISIBLE);
             shape_heart.setVisibility(View.GONE);
